@@ -1,0 +1,33 @@
+{
+    "name": "crodic-crystal-snippets",
+    "displayName": "Crodic Crystal Snippets",
+    "description": "This is extension support NextJS ^13, ReactJS ^18 and Nodejs",
+    "version": "0.0.1",
+    "repository": {},
+    "engines": {
+        "vscode": "^1.93.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "javascript",
+                "path": "./snippets/snippets.code-snippets"
+            },
+            {
+                "language": "typescript",
+                "path": "./snippets/snippets.code-snippets"
+            },
+            {
+                "language": "javascriptreact",
+                "path": "./snippets/snippets.code-snippets"
+            },
+            {
+                "language": "typescriptreact",
+                "path": "./snippets/snippets.code-snippets"
+            }
+        ]
+    }
+}

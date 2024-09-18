@@ -1,0 +1,490 @@
+{
+    // ** React Functional
+    "NextArrowFunctionExportComponent": {
+        "prefix": "@rafce",
+        "body": [
+            "const ${1:${TM_FILENAME_BASE}} = () => {",
+            "  return (",
+            "    <div>${1:first}</div>",
+            "  )",
+            "}",
+            "",
+            "export default ${1:${TM_FILENAME_BASE}}"
+        ],
+        "description": "Creates a React Arrow Function Component with ES7 module system",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "InterfaceNextArrowFunctionExportComponent": {
+        "prefix": "@irafce",
+        "body": [
+            "interface I${1:${TM_FILENAME_BASE}}Props {}",
+            "",
+            "const ${1:${TM_FILENAME_BASE}} = (props: I${1:${TM_FILENAME_BASE}}Props) => {",
+            "  return (",
+            "    <div>${1:first}</div>",
+            "  )",
+            "}",
+            "",
+            "export default ${1:${TM_FILENAME_BASE}}"
+        ],
+        "description": "Creates a React Arrow Function Component with ES7 module system and TypeScript interface",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "NextClientArrowFunctionExportClientComponent": {
+        "prefix": "@nafce",
+        "body": [
+            "'use client'",
+            "",
+            "const ${1:${TM_FILENAME_BASE}} = () => {",
+            "  return (",
+            "    <div>${1:first}</div>",
+            "  )",
+            "}",
+            "",
+            "export default ${1:${TM_FILENAME_BASE}}"
+        ],
+        "description": "Creates a Next Arrow Function Component with ES7 module system",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "ReactFunctionMemoComponent": {
+        "prefix": "@rmc",
+        "body": [
+            "import { memo } from 'react'",
+            "",
+            "const ${1:${TM_FILENAME_BASE}} = memo(() => {",
+            "  return (",
+            "    <div>${1:first}</div>",
+            "  )",
+            "})",
+            "",
+            "export default ${1:${TM_FILENAME_BASE}}"
+        ],
+        "description": "Create a React Memo Function Component with ES7 module system",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "Async Arrow Functional": {
+        "prefix": "@asaf",
+        "body": ["const ${1:first} = async () => {", "", "}"],
+        "description": "Async Arrow Functional",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "Arrow Functional": {
+        "prefix": "@arf",
+        "body": ["const ${1:first} = () => {", "", "}"],
+        "description": "Arrow Functional",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "DefaultFunction": {
+        "prefix": "@f",
+        "body": ["function ${1:default}(){", "    ", "}"],
+        "description": "DefaultFunction",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "AsyncDefaultFunction": {
+        "prefix": "@asf",
+        "body": ["async function ${1:default}(){", "    ", "}"],
+        "description": "AsyncDefaultFunction",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "AnonymousFunctions": {
+        "prefix": "@anf",
+        "body": ["const ${1:default} = function() {", "    return null", "}"],
+        "description": "AnonymousFunctions",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    // ** Hook
+    "useCallback": {
+        "prefix": "@useCallbackSnippet",
+        "body": ["useCallback(", "  () => {", "    ${1:first}", "  },", "  [${2:second}],", ")", ""],
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "useContext": {
+        "prefix": "@useContextSnippet",
+        "body": ["const ${1:first} = useContext(${2:second})"],
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "useEffect": {
+        "prefix": "@useEffectSnippet",
+        "body": [
+            "useEffect(() => {",
+            "  ${1:first}",
+            "",
+            "  return () => {",
+            "    ${2:second}",
+            "  }",
+            "}, [${3:third}])",
+            ""
+        ],
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "useMemo": {
+        "prefix": "@useMemoSnippet",
+        "body": ["useMemo(() => ${1:first}, [${2:second}])"],
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "useReducer": {
+        "prefix": "@useReducerSnippet",
+        "body": ["const [state, dispatch] = useReducer(${1:first}, ${2:second}, ${3:third})"],
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "useRef": {
+        "prefix": "@useRefSnippet",
+        "body": ["const ${1:first} = useRef(${2:second})"],
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "useState": {
+        "prefix": "@useStateSnippet",
+        "body": ["const [${1:first}, set${1/(.*)/${1:/capitalize}/}] = useState(${2:second})"],
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "useRouter": {
+        "prefix": "@useRouter",
+        "body": ["const router = useRouter()"],
+        "description": "useRouter",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "usePathname": {
+        "prefix": "@usePathname",
+        "body": ["const pathname = usePathname()"],
+        "description": "usePathname",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "useSearchParams": {
+        "prefix": "@useSearchParams",
+        "body": ["const searchParams = useSearchParams()"],
+        "description": "useSearchParams",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "useFormStatus": {
+        "prefix": "@useFormStatus",
+        "body": ["const { pending } = useFormStatus()"],
+        "description": "useFormStatus",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "useFormState": {
+        "prefix": "@useFormState",
+        "body": [" const [state, formAction] = useFormState(${1:action}, ${2:initial})"],
+        "description": "useFormState",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    // ** Utils
+    "RandomImage": {
+        "prefix": "@rdi",
+        "body": ["https://source.unsplash.com/random"],
+        "description": "Generate random image url form unplash",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "Import": {
+        "prefix": "@imp",
+        "body": ["import ${2:second} from '${1:first}'"],
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "ImportObject": {
+        "prefix": "@impo",
+        "body": ["import {${2:second}} from '${1:first}'"],
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "Persist Store Zustand": {
+        "prefix": "@zustand",
+        "body": [
+            "import { create } from 'zustand';",
+            "import { immer } from 'zustand/middleware/immer';",
+            "import { persist, createJSONStorage } from 'zustand/middleware';",
+            "",
+            "export const ${1:${TM_FILENAME_BASE}} = create(",
+            "    persist(",
+            "        immer((set) => ({",
+            "            count: 0,",
+            "            updateCount: (number) =>",
+            "                set((state) => {",
+            "                    state.count = number;",
+            "                })",
+            "        })),",
+            "        {",
+            "            name: '${2:store}',",
+            "            storage: createJSONStorage(() => ${3:localStorage}),",
+            "        }",
+            "    )",
+            ");"
+        ],
+        "description": "Create Store Zustand with ImmerJS",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "Store Zustand": {
+        "prefix": "@zus",
+        "body": [
+            "import { create } from 'zustand'",
+            "import { immer } from 'zustand/middleware/immer'",
+            "",
+            "export const ${1:${TM_FILENAME_BASE}} = create(",
+            "  immer((set) => ({",
+            "    count: 0,",
+            "  })),",
+            ")"
+        ],
+        "description": "Store Zustand",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "consoleAssert": {
+        "prefix": "@cas",
+        "body": ["console.assert(${1:first}, ${2:second})"],
+        "description": "If the specified expression is false, the message is written to the console along with a stack trace",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "consoleClear": {
+        "prefix": "@ccl",
+        "body": ["console.clear()"],
+        "description": "Clears the console",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "consoleCount": {
+        "prefix": "@cco",
+        "body": ["console.count(${1:first})"],
+        "description": "Writes the the number of times that count() has been invoked at the same line and with the same label",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "consoleDir": {
+        "prefix": "@cdi",
+        "body": ["console.dir(${1:first})"],
+        "description": "Prints a JavaScript representation of the specified object",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "consoleError": {
+        "prefix": "@cer",
+        "body": ["console.error(${1:first})"],
+        "description": "Displays a message in the console and also includes a stack trace from where the method was called",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "consoleGroup": {
+        "prefix": "@cgr",
+        "body": ["console.group('${1:first}')"],
+        "description": "Groups and indents all following output by an additional level, until console.groupEnd() is called.",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "consoleGroupEnd": {
+        "prefix": "@cge",
+        "body": ["console.groupEnd()"],
+        "description": "Closes out the corresponding console.group().",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "consoleLog": {
+        "prefix": "@clg",
+        "body": ["console.log(${1:first})"],
+        "description": "Displays a message in the console",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "consoleTrace": {
+        "prefix": "@ctr",
+        "body": ["console.trace(${1:first})"],
+        "description": "Prints a stack trace from the point where the method was called",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "consoleLogObject": {
+        "prefix": "@clo",
+        "body": ["console.log('${1:first}', ${1:first})"],
+        "description": "Logs property with name.",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "consoleLogJson": {
+        "prefix": "@clj",
+        "body": ["console.log('${1:first}', JSON.stringify(${1:first}, null, 2))"],
+        "description": "Logs stringified JSON property with name.",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "consoleTime": {
+        "prefix": "@ctm",
+        "body": ["console.time('${1:first}')"],
+        "description": "Console time wrapper",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "consoleTimeEnd": {
+        "prefix": "@cte",
+        "body": ["console.timeEnd('${1:first}')"],
+        "description": "Console time end wrapper",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "consoleWarn": {
+        "prefix": "@cwa",
+        "body": ["console.warn(${1:first})"],
+        "description": "Displays a message in the console but also displays a yellow warning icon along with the logged message",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "consoleInfo": {
+        "prefix": "@cin",
+        "body": ["console.info(${1:first})"],
+        "description": "Displays a message in the console but also displays a blue information icon along with the logged message",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "consoleTable": {
+        "prefix": "@ctl",
+        "body": ["console.table([${1:first}])"],
+        "description": "Logs table to console",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    // ** Next Page
+    "RootLayout": {
+        "prefix": "@layout",
+        "body": [
+            "export default function RootLayout({",
+            "  children,",
+            "}: {",
+            "  children: React.ReactNode",
+            "}) {",
+            "  return (",
+            "    <>",
+            "      {children}",
+            "    </>",
+            "  )",
+            "}"
+        ],
+        "description": "RootLayout"
+    },
+    "ErrorPage": {
+        "prefix": "@perr",
+        "body": [
+            "'use client'",
+            " ",
+            "import { useEffect } from 'react'",
+            " ",
+            "export default function Error({",
+            "  error,",
+            "  reset,",
+            "}: {",
+            "  error: Error & { digest?: string }",
+            "  reset: () => void",
+            "}) {",
+            "  useEffect(() => {",
+            "    console.error(error)",
+            "  }, [error])",
+            " ",
+            "  return (",
+            "    <div>",
+            "      <h2>Something went wrong!</h2>",
+            "      <button",
+            "        onClick={",
+            "          () => reset()",
+            "        }",
+            "      >",
+            "        Try again",
+            "      </button>",
+            "    </div>",
+            "  )",
+            "}"
+        ],
+        "description": "ErrorPage"
+    },
+    "DynamicRoutePage": {
+        "prefix": "@dynr",
+        "body": [
+            "const Page = ({ params }: { params: { ${1:slug}: string } }) => {",
+            "  return <div>{params.${1:slug}}</div>",
+            "}",
+            "",
+            "export default Page;"
+        ],
+        "description": "DynamicRoutePage"
+    },
+    "ParallelRoutesPage": {
+        "prefix": "@prlr",
+        "body": [
+            "export default function Layout({",
+            "  children,",
+            "  ${1:first},",
+            "  ${2:secondary},",
+            "}: {",
+            "  children: React.ReactNode",
+            "   ${1:first}: React.ReactNode",
+            "   ${2:secondary}: React.ReactNode",
+            "}) {",
+            "  return (",
+            "    <>",
+            "      {children}",
+            "      {${1:first}}",
+            "      {${2:secondary}}",
+            "    </>",
+            "  )",
+            "}"
+        ],
+        "description": "ParallelRoutesPage"
+    },
+    // ** Next Utils
+    "Metadata": {
+        "prefix": "@meta",
+        "body": ["export const metadata: Metadata = {", "  title: 'Next.js',", "}", ""],
+        "description": "Metadata"
+    },
+    "Middleware": {
+        "prefix": "@middleware",
+        "body": [
+            "import { NextResponse } from 'next/server'",
+            "import type { NextRequest } from 'next/server'",
+            " ",
+            "export function middleware(request: NextRequest) {",
+            "  return NextResponse.redirect(new URL('/home', request.url))",
+            "}",
+            " ",
+            "export const config = {",
+            "  matcher: [",
+            "    /*",
+            "     * Match all request paths except for the ones starting with:",
+            "     * - api (API routes)",
+            "     * - _next/static (static files)",
+            "     * - _next/image (image optimization files)",
+            "     * - favicon.ico (favicon file)",
+            "     */",
+            "    '/((?!api|_next/static|_next/image|favicon.ico).*)',",
+            "  ],"
+        ],
+        "description": "Middleware"
+    },
+    "Suspense": {
+        "prefix": "@suspense",
+        "body": ["<Suspense fallback={${1:loading}}>", "    ", "</Suspense>"],
+        "description": "Suspense",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "AbortController": {
+        "prefix": "@abort",
+        "body": ["const { signal } = new AbortController()"],
+        "description": "AbortController",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "Dynamic": {
+        "prefix": "@dynamic",
+        "body": ["export const dynamic = '${1:force-dynamic}'"],
+        "description": "Dynamic",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    // ** Next Route Handler
+    "GET": {
+        "prefix": "@get",
+        "body": ["export async function GET(request: Request) {}"],
+        "description": "GET",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "POST": {
+        "prefix": "@post",
+        "body": ["export async function POST(request: Request) {}"],
+        "description": "POST",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "PUT": {
+        "prefix": "@put",
+        "body": ["export async function PUT(request: Request) {}"],
+        "description": "PUT",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    "DELETE": {
+        "prefix": "@delete",
+        "body": ["export async function DELETE(request: Request) {}"],
+        "description": "DELETE",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    },
+    // ** Styles
+    "CSSModule": {
+        "prefix": "@mcss",
+        "body": ["import styles from '${1:first}'"],
+        "description": "CSSModule",
+        "scope": "typescript,typescriptreact,javascript,javascriptreact"
+    }
+}
