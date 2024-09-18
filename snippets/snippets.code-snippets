@@ -92,6 +92,31 @@
         "description": "AnonymousFunctions",
         "scope": "typescript,typescriptreact,javascript,javascriptreact"
     },
+    "Functional Component": {
+        "prefix": "@sfc",
+        "body": ["function ${1:${TM_FILENAME_BASE}} (${1:props}) {", "    return <>${1:${TM_FILENAME_BASE}}</>", "}"],
+        "description": "Functional Component"
+    },
+    "Async Functional Component": {
+        "prefix": "@asfc",
+        "body": [
+            "async function ${1:${TM_FILENAME_BASE}} (${1:props}) {",
+            "    return <>${1:${TM_FILENAME_BASE}}</>",
+            "}"
+        ],
+        "description": "Async Functional Component"
+    },
+    "Client Functional Component": {
+        "prefix": "@asfc",
+        "body": [
+            "'use client'",
+            "",
+            "function ${1:${TM_FILENAME_BASE}} (${1:props}) {",
+            "    return <>${1:${TM_FILENAME_BASE}}</>",
+            "}"
+        ],
+        "description": "Client Functional Component"
+    },
     // ** Hook
     "useCallback": {
         "prefix": "@useCallbackSnippet",
@@ -167,9 +192,16 @@
         "description": "useFormState",
         "scope": "typescript,typescriptreact,javascript,javascriptreact"
     },
+    "useOptimistic": {
+        "prefix": "@useOptimistic",
+        "body": [
+            "const [${1:optimistic}, add${1:optimistic}] = useOptimistic(messages, (state, newMessage) => [...state, { message: newMessage }])"
+        ],
+        "description": "useOptimistic"
+    },
     // ** Utils
     "RandomImage": {
-        "prefix": "@rdi",
+        "prefix": "@ramdomImage",
         "body": ["https://source.unsplash.com/random"],
         "description": "Generate random image url form unplash",
         "scope": "typescript,typescriptreact,javascript,javascriptreact"
@@ -225,6 +257,7 @@
         "description": "Store Zustand",
         "scope": "typescript,typescriptreact,javascript,javascriptreact"
     },
+    // ** Console
     "consoleAssert": {
         "prefix": "@cas",
         "body": ["console.assert(${1:first}, ${2:second})"],
@@ -340,7 +373,7 @@
         "description": "RootLayout"
     },
     "ErrorPage": {
-        "prefix": "@perr",
+        "prefix": "@error",
         "body": [
             "'use client'",
             " ",
