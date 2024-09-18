@@ -2,7 +2,7 @@
     "name": "crodic-crystal-snippets",
     "displayName": "Crodic Crystal Snippets",
     "description": "This is extension support NextJS ^13, ReactJS ^18 and Nodejs",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "publisher": "crodic",
     "repository": {
         "url": "https://github.com/crodic/crodic-crystal-snippets",

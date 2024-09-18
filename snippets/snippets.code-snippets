@@ -195,9 +195,35 @@
     "useOptimistic": {
         "prefix": "@useOptimistic",
         "body": [
-            "const [${1:optimistic}, add${1:optimistic}] = useOptimistic(messages, (state, newMessage) => [...state, { message: newMessage }])"
+            "const [${1:optimistic}, add${1/(.*)/${1:/capitalize}/}] = useOptimistic(${2:state}, (state, new${1/(.*)/${2:/capitalize}/}) => {})"
         ],
         "description": "useOptimistic"
+    },
+    "useDebounce": {
+        "prefix": "@useDebounce",
+        "body": [
+            "import { useState, useEffect } from 'react';",
+            "",
+            "function useDebounce<T>(value: T, delay?: number = 500): T {",
+            "  const [debouncedValue, setDebouncedValue] = useState<T>(value);",
+            "",
+            "  useEffect(() => {",
+            "    const timer = setTimeout(() => {",
+            "      setDebouncedValue(value);",
+            "    }, delay);",
+            "",
+            "    return () => {",
+            "      clearTimeout(timer);",
+            "    };",
+            "  }, [value, delay]);",
+            "",
+            "  return debouncedValue;",
+            "}",
+            "",
+            "export default useDebounce;",
+            ""
+        ],
+        "description": "useDebounce"
     },
     // ** Utils
     "RandomImage": {
